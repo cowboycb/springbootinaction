@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/")
 public class ReadingListController {
     private ReadingListRepository readingListRepository;
 
@@ -21,6 +20,11 @@ public class ReadingListController {
     public ReadingListController(
         ReadingListRepository readingListRepository) {
         this.readingListRepository = readingListRepository;
+    }
+
+    @RequestMapping("/")
+    public String main(){
+        return "readingList";
     }
 
     @RequestMapping(value="/{reader}", method= RequestMethod.GET)

@@ -1,0 +1,24 @@
+spring:
+  thymeleaf:
+    cache: false
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+
+logging:
+  level:
+    root: WARN
+    org.springframework.security: INFO
+  file:
+    path: ./logs/
+    name: service.log
+
+#deneme-levels: a;b;c
+
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:mykeys.jks
+    key-store-password: letmein
+    key-password: letmein

@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class ReadingListController {
-    private ReadingListRepository readingListRepository;
+    private final ReadingListRepository readingListRepository;
 
     @Autowired
-    public ReadingListController(
-        ReadingListRepository readingListRepository) {
+    public ReadingListController(ReadingListRepository readingListRepository) {
         this.readingListRepository = readingListRepository;
     }
 
